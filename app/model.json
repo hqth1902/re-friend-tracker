@@ -195,6 +195,43 @@
                 ]
             },
             {
+                "id": "FriendActivityFormFromActivity",
+                "title": "Friend",
+                "url": "/activity/:activityKey/friend",
+                "formFieldList": [
+                    {
+                        "id": "friend",
+                        "type": "autocomplete",
+                        "readonly": true,
+                        "url": "/friend",
+                        "defaultKey": "friendKey",
+                        "form": "FriendForm",
+                        "width": 2
+                    },
+                    {
+                        "id": "activity",
+                        "type": "autocomplete",
+                        "readonly": true,
+                        "url": "/activity",
+                        "defaultKey": "activityKey",
+                        "form": "ActivityForm",
+                        "width": 2
+                    },
+                    {
+                        "type": "deleteButton",
+                        "name": "Delete"
+                    },
+                    {
+                        "type": "cancelButton",
+                        "name": "Cancel"
+                    },
+                    {
+                        "type": "okButton",
+                        "name": "Ok"
+                    }
+                ]
+            },
+            {
                 "id": "AddActivityForm",
                 "title": "Activity",
                 "url": "/friend/:friendKey/activity",
@@ -318,7 +355,6 @@
                         "search": true,
                         "url": "/friend",
                         "page": "frienddetailpage"
-                        
                     }
                 ]
             },
@@ -353,7 +389,7 @@
                         "search": true,
                         "url": "/friend/:friendKey/activity",
                         "form": {
-                            "form": "ActivityForm"
+                            "form": "AddActivityForm"
                         }
                     }
                 ]
@@ -380,7 +416,7 @@
                         "search": true,
                         "url": "/activity/:activityKey/friend",
                         "form": {
-                            "form": "FriendForm"
+                            "form": "FriendActivityFormFromActivity"
                         }
                     }
                 ]
@@ -435,7 +471,6 @@
                         "search": true,
                         "url": "/location",
                         "page": "locationdetailpage"
-                        
                     }
                 ]
             },
